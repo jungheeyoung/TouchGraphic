@@ -2,6 +2,7 @@ package kr.hs.emirim.young24.touchgraphic;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
             float cx = getWidth()/2.0f;
             float cy = getHeight()/2.0f;
             Paint paint = new Paint();
-            canvas.drawCircle(cx,cy,100,paint);//paint - 선의 굵기 설정
+            paint.setStrokeWidth(7);
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setColor(Color.MAGENTA);
+            paint.setStyle(Paint.Style.FILL);
+            canvas.drawRect(10, 10, 210, 160, paint);
+            canvas.drawCircle(cx,cy,200,paint);//paint - 선의 굵기 설정
         }
     }
 }
