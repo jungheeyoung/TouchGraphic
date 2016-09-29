@@ -13,7 +13,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new DrawShape(getApplicationContext()));
+        setContentView(R.layout.activity_main);
+    }
+
+    public void drawShape(View v){
+
     }
     class DrawShape extends View {
         DrawShape(Context context){ //상속을 받았기에 그에 맞는 부모 객체를 만들어줘야함
